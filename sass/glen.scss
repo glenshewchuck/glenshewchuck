@@ -1,0 +1,32 @@
+// product styling
+
+
+// STEPS
+// #1 add entries to gradient @mixin for wanted products
+// #2 add sku list
+
+@mixin gradient($color) {
+  background-color:$color;
+}
+
+
+$sku-ob-001: eiq-inv-001, eiq-inv-001, eiq-inv-001-hover, #ffaf4b;
+$sku-ob-002: eiq-inv-002, eiq-inv-002, eiq-inv-002-hover, #ffaf4b;
+
+$products: $sku-ob-001, $sku-ob-002;
+
+@each $sku in $products {
+
+    body.partner-#{nth($sku,1)} input[type="submit"] {
+      @include gradient(nth($sku, 2));
+      &:focus, &:hover {
+        @include gradient(nth($sku, 3));
+      }
+    }
+
+    body.partner-#{nth($sku,1)} {
+      h1, h2 {
+        font-color: nth($sku, 4);
+      }
+    }
+}
