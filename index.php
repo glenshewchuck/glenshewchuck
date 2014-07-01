@@ -12,7 +12,11 @@
 
 <body>
 <p>&nbsp;</p>
-<p><center>back to clean index file with jquery</center</p>
+<p>
+  <center>
+    back to clean index file with jquery
+  </center
+</p>
 <p><center>back to clean index file with jquery</center</p>
 <p><center>back to clean index file with jquery</center</p>
 <p><center>back to clean index file with jquery</center</p>
