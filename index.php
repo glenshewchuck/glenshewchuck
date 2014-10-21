@@ -12,16 +12,9 @@
 
 <body>
 <p>&nbsp;</p>
-<p>
-  <center>
-    back to clean index file with jquery
-  </center
-</p>
-<p><center>from master back to clean index file with jquery</center</p>
-<p><center>from master back to clean index file with jquery</center</p>
+<p><center>back to clean index file with jquery</center</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </div>
-<div class="new_in_t4">this is created in t4</div>
 </body>
 <html>
