@@ -1,20 +1,20 @@
 <html>
 <head>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-<script type="text/javascript" src="select.js"></script>
-<style>
-</style>
-
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="http://test.dev/test.js"></script>
 </head>
 
 
 <body>
+<p class="test1">test test test</p>
 <p>&nbsp;</p>
-<p><center>back to clean index file with jquery</center</p>
+<form name="form">
+  <input id='goforit_input' onclick="goforit();" type="button" value="Send Message" />&nbsp;</form>
+  <!-- 
+  <input id='goforit_input' onclick="goforit();" data-command="printit" type="button" value="Send Message" />&nbsp;</form>
+  -->
 <p>&nbsp;</p>
+<a href="http://earlyiq.dev/art1">ART1</a>
 <p>&nbsp;</p>
-</div>
 </body>
-<html>
+</html>
