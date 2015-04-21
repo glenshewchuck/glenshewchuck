@@ -1,0 +1,2462 @@
+/***********************************
+*   earlyiq theme styles
+*   Developer: tragic{media}
+***********************************/
+
+
+/*
+ *  basic styles (some are used in code) 
+ */
+
+.color-red {
+    color:$color-red;
+}
+.color-green {
+    color:$color-green;
+}
+.color-grey20 {
+    color:$color-grey20;
+}
+
+.font-size-75p {
+    font-size:75%;
+}
+.font-size-150p {
+    font-size:150%;
+}
+.font-size-normal,
+.font-size-content {
+    font-size:13px;
+}
+
+
+/*
+ *  header styles
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+h2, li, a, p {
+    font-family:$font-primary;
+}
+
+h1, h2, h3 {
+    font-weight:bold;
+}
+
+h2, h3, h4 {
+    margin:0;
+}
+
+h1, h2 {
+    color:$color-blue;
+}
+
+h3, h4 {
+    font-size:16px;
+    line-height:18px;
+}
+
+h1 {
+    font-size:32px;
+    line-height:34px;
+
+    &.title {
+        border-bottom: 1px solid #CCCCCC;
+        line-height: 44px;
+        margin: 0 0 20px;
+        padding-bottom: 12px;
+    }
+}
+
+h2 {
+    font-size:24px;
+    line-height:26px;
+    padding-bottom:5px;
+    &.kba-process-header {
+      font-size:18px;
+      line-height:22px;
+    }
+}
+
+h3 {
+    color:$color-link-grey;
+}
+
+#report-header h1 {
+    display:inline-block;
+    float:right;
+    font-size:18px;
+    line-height:36px !important;
+    padding-top:15px;
+    min-width:250px;
+}
+
+.node-type-article h1.title {
+    margin: 0 0 10px;
+}
+
+/* added h3 and h4 formatting for the press release page
+   also.  I didn't include any more right now since I'm 
+   not sure what else it would affect */
+.page-about-press-releases .region-content,
+.page-node .region-content,
+.region-sidebar-second {
+    h3 {
+        font-size:14px;
+        line-height:20px;
+        font-weight:normal;
+    }
+
+    h4 {
+        color:$color-blue;
+        font-weight:bold;
+    }
+}
+
+/*
+ *  link styles
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+a {
+    color: $color-link-grey;
+    &:hover,
+    &:focus {
+    color:$color-blue;
+    }
+}
+
+a:active,
+li a.active {
+    color: #000;
+}
+
+li.disc {
+  list-style:disc;
+}
+li.nodisc {
+  list-style:none;
+}
+
+// main menu
+#block-system-main-menu {
+    a, a:visited {
+        border:0;
+        border-bottom:2px solid transparent;
+        color:$color-link-grey;
+        display: block;
+        font-size: 15px;
+        margin-right: 20px;
+        padding: 10px 0 5px;
+        text-decoration: none;
+        padding-top:0 !important;
+        padding-bottom:12px !important;
+
+        &.last {
+          margin-right:0;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-blue;
+        }
+
+        &:hover,
+        &.active,
+        &.active-trail {
+            border-bottom:2px solid $color-header-green;
+            color:$color-blue;
+        }
+        &.active,
+        &.active-trail {
+        }
+        &.menu-minipanel:hover,
+        &.menu-minipanel.active:hover,
+        &.menu-minipanel.active-trail:hover {
+          border-bottom:2px solid transparent;
+        }
+    }
+
+    li.last a {
+        margin-right: 0;
+    }
+
+    /*&:hover a,
+    a:focus,
+    a.active,
+    a.active-trail {
+        border: 0 !important;
+    }*/
+}
+
+// user menu
+#block-system-user-menu {
+    a,
+    a.hover,
+    a.active,
+    a.visited {
+        color:$color-black;
+        font-size:11px;
+        line-height:18px;
+        text-decoration: none;
+    }
+    &.first {
+        padding-right:15px;
+    }
+}
+
+// footer menu
+#block-menu-menu-footer a {
+    font-size:13px;
+    line-height:24px;
+    text-decoration:none !important;
+}
+
+// back to top link
+#block-block-7 a.link-top {
+    background:url($pathImg + 'up.png') no-repeat 0 0;
+    color:#ddd;
+    float:right !important;
+    padding:0 0 0 24px;
+    text-decoration:none;
+    &:hover {
+        color:#777;
+    }
+}
+
+
+
+// ajax forms row controller
+.alpha-resize-indicator {
+    background: url("../images/resize-handle.png") no-repeat scroll 0 0 transparent;
+    bottom: 0;
+    display: block;
+    height: 80px;
+    position: fixed;
+    right: 0;
+    width: 80px;
+    z-index: 998;
+}
+/*
+ * General styles
+ */
+.decoration-none {
+  text-decoration:none;
+}
+
+/* when you need to hide something, like in a view you can use this */
+.hideit {
+  display:none;
+}
+/* when you need to hide only while in edit node form*/
+.hideit_in_edit {
+  display:none;
+}
+body.page-node-edit .hideit_in_edit {
+  display:block;
+}
+
+/*
+ * General form styles
+ */
+
+html.js fieldset.collapsed {
+    height:auto !important; // override
+}
+
+// white arrows
+html.js fieldset.collapsible .fieldset-legend {
+    background-image:url($pathImg + 'menu-expanded-wht.png');
+}
+
+html.js fieldset.collapsed .fieldset-legend {
+    background-image:url($pathImg + 'menu-collapsed-wht.png');
+}
+
+// ajax icon override
+html.js input.form-autocomplete {
+    background-position:100% 5px;
+}
+
+/* all forms */
+#main-wrapper form {
+
+    .form-item,
+    .form-actions {
+      margin:0;
+    }
+
+    textarea,
+    input[type='text'],
+    input[type='password'] {
+        @include border-radius(4px);
+        border-color:#bbb;
+        margin:0;
+        padding-left:5px;
+
+        &:focus {
+          border-color:$color-text-grey;
+        }
+    }
+
+    // input padding, textarea exluded
+    input[type='text'],
+    input[type='password'],
+    input[type='email'] {
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    .grippie {
+        display:none;
+    }
+
+    .error {
+      background:#FFF0F5;
+      border:2px solid #ff0000 !important;
+      color:#ff0000;
+    }
+}
+
+.field-type-link-field label,
+.field-type-link-field .link-field-subrow,
+.field-type-link-field .link-field-subrow .link-field-url,
+.field-type-link-field .link-field-subrow .link-field-url .form-item,
+.field-type-link-field .description {
+    display:block;
+}
+
+.field-type-link-field .link-field-subrow{
+    float:left;
+}
+
+.field-type-link-field .description {
+    font-style:italic;
+    padding-left:15px;
+}
+
+.form-type-textarea {
+    @include wrap();
+
+    .form-textarea-wrapper {
+        float:left;
+        // will label this will total max px with 2nd sidebar active
+        width:423px;
+
+        // if no sidebars set wider
+        .no-sidebars & {
+          width:95%;
+          max-width:1024px;
+        }
+
+    }
+
+}
+
+
+
+// block display elements
+#field-invite-officers-values,
+#field-address-values,
+fieldset legend,
+html.js fieldset.collapsible .fieldset-legend {
+    @include wrap();
+    display:block;
+    width:100%;
+}
+
+#field-address-values,
+#field-invite-officers-values {
+    padding-left:5px;
+    thead label {
+      padding-left:0;
+    }
+    .field-label {
+        width:760px;
+    }
+}
+
+.tabledrag-toggle-weight-wrapper {
+  display:none;
+}
+
+.tabledrag-toggle-weight-wrapper a {
+    color:$color-text-grey;
+    float:right;
+    font-size:12px;
+    margin-right:10px;
+    padding-right:10px;
+    text-decoration:none;
+}
+
+#block-masquerade-masquerade form fieldset legend {
+
+}
+
+#block-masquerade-masquerade form input[type='text'] {
+    width:200px;
+    padding:4px;
+    margin-bottom:15px;
+}
+
+/* form button styles */
+// submit buttons
+    input[type='submit'] {
+    @include eiq_action_btn(auto, 30px);
+    //height:auto;
+    float:left;
+    font-size:15px;
+    margin-top:15px;
+    padding:0 15px;
+    padding-top:5px;
+    padding-bottom:5px;
+    line-height:normal;
+    -webkit-font-smoothing:antialiased;
+        &:hover {
+            cursor:pointer;
+        }
+    }
+
+/* TEST for product specific coloring
+    body.partner-eiq-inv-001 input[type='submit'] {
+      @include eiq_action_btn_custom(auto, 30px);
+    }
+
+    body.partner-eiq-inv-001 h1,
+    body.partner-eiq-inv-001 h2 {
+      color:green;
+    }
+*/
+
+/*}*/
+
+.blue-button,
+.page-partner-no-thanks .content a.form-submit,
+#modal-content a.form-submit,
+#eiq-report-card-approve-dispute-form a.form-submit,
+a#edit-submit-cancel, #no-thanks-go-back {
+    @include eiq_action_btn(auto, 30px);
+    height:auto;
+    float:left;
+    font-family: 'arial', arial, helvetica, sans-serif;
+    font-size:15px;
+    font-weight:normal;
+    margin-top:15px;
+    padding:0 15px;
+        &:hover {
+            cursor:pointer;
+        }
+}
+
+.page-partner-no-thanks .content a.form-submit, 
+#no-thanks-go-back {
+  margin-right:15px;
+}
+#eiq-partners-nothanks-form {
+  & > div > h2 {
+    padding-top:20px;
+  }
+  #edit-leave {
+    margin-top:15px;
+    margin-left:15px;
+  }
+  #no-thanks-info {
+    max-width:600px;
+  }
+}
+
+.draggable a.tabledrag-handle {
+    margin-left:0;
+}
+form .field-multiple-table td.field-multiple-drag a.tabledrag-handle {
+    padding-right:0;
+}
+
+.partner div.status, .partner .ok {
+    @include border-radius(0);
+    background-color:transparent;
+    border:0;
+    color:$color-blue;
+    height:auto;
+    font-size:16px;
+    line-height:22px;
+    padding-bottom:15px;
+    li {
+      list-style:none;
+    }
+}
+.password-confirm .ok {
+//  @include border-radius(0);
+}
+
+/*
+ *  layout
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+#main {
+    display: block !important;
+    width: 100%;
+}
+
+// watermark
+#content-wrap {
+    background:url($pathImg + 'watermark.png') 20px bottom no-repeat;
+    padding-bottom:35px;
+    min-height:650px;
+}
+
+#main-wrapper {
+  position:relative;
+}
+
+body.no-sidebars #content {
+    border:none;
+}
+
+body.sidebar-second #content {
+  border-right:1px dashed #CCCCCC;
+  padding:0 32px 40px 20px;
+}
+
+#page-wrapper,
+.region-bottom {
+    margin:0 auto;
+    width:960px;
+}
+
+/* Header */
+header {
+    border-bottom:3px solid #ccc;
+    margin: 0 0 15px;
+    padding:10px 0 14px;
+    text-align:left;
+}
+
+/*
+#logo {
+    display:block;
+    float:left;
+    margin:0;
+    padding:0;
+    img {
+      padding-top:10px;
+    }
+}*/
+
+.region-header {
+  @include wrap();
+    clear: none;
+
+   .block-core-ef {
+      float:left;
+
+      a img {
+        @include size(auto, auto); /* I have no idea why this is necessary */
+        padding-top:0px;
+      }
+   }
+}
+
+.breadcrumb {
+    background: none repeat scroll 0 0 transparent;
+    font-size:13px;
+    line-height:15px;
+    margin-top: 14px;
+    margin-bottom: 9px;
+    padding: 0 0 0 20px;
+    color: #333333;
+    a {
+        color: #333333;
+    }
+}
+
+#block-multiblock-1 {
+    clear: none;
+}
+
+p {
+  font-size:13px;
+  line-height:16px;
+}
+
+/* not front */
+body.not-front {
+
+    #content {
+        display: block;
+        padding: 0 0 40px 20px;
+        width: 920px;
+    }
+
+    &.one-sidebar #content {
+        border-left: 1px dashed #CCCCCC;
+        float:left;
+        width:628px;
+    }
+
+    .region-sidebar-first {
+        float: left;
+        padding: 0 20px 40px;
+        width: 270px;
+    }
+    .region-sidebar-second {
+        float: right;
+        clear: none;
+        margin:0;
+        padding: 0 8px 40px 11px;
+        width: 267px;
+        border-top: none;
+        background: none repeat scroll 0 0 transparent;
+
+        .block {
+          margin-top:30px;
+        }
+        .block:first-child {
+          margin-top:0px;
+        }
+    }
+}
+
+/* administrator will always have a top margin on first-child 
+   because on some pages it does not have any other things like 
+   on the /user page
+*/
+body.role-administrator .region-sidebar-second .block:first-child {
+  margin-top:30px;
+}
+
+/* Prevent overflowing content .... seven legacy code */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-footer,
+.region-bottom {
+  overflow: visible;
+  word-wrap: break-word;
+}
+
+/* sidebar */
+.sidebar, .region-sidebar-first {
+
+  #block-nodeblock-35 {
+    margin-top:15px;
+    padding-top:15px;
+
+    /* ie fix to make sure text starts on next line */
+    .trust-text p:nth-child(2) {
+      clear:both;
+    }
+  }
+
+  /* hide block title */
+  #block-nodeblock-35 h2 {
+    display:none;
+  }
+  /* show wysiwyg title */
+  #block-nodeblock-35 .content h2 {
+    display:block;
+  }
+
+  #block-nodeblock-35 h2 {
+    background-position:172px 8px;
+    font-size:23px;
+    line-height:24px;
+    padding:0 70px 0 0;
+    width:185px;
+  }
+
+  .trust-text {
+    width:100%;
+  }
+
+  .start-links {
+    padding-left:0;
+  }
+}
+
+.region-highlighted .block-nodeblock {
+  clear: both;
+  margin-left:0;
+  padding:15px 0 0 20px;
+}
+
+.start-links {
+      p a {
+        @include eiq_action_btn(217px, 44px);
+        @include gradient('blue_btn');
+        &:focus, &:hover {
+          @include gradient('blue_btn_hover');
+        }
+        &:first {
+          margin-bottom:30px;
+        }
+    }
+    p {
+        margin-bottom: 25px;
+    }
+}
+
+
+/* footer */
+
+.region-bottom {
+    padding: 0 20px;
+    ul.menu li.leaf a {
+        color:$color-white;
+    }
+}
+
+.closure {
+  background:$color-text-grey;
+    margin-left: auto;
+    margin-right: auto;
+    //min-height: 291px;
+    padding:20px 0;
+    width: 100%;
+    .block {
+        //float: left;
+        float: right;
+        clear: none;
+        //margin-bottom: 52px;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 30px;
+        //padding-top: 5px;
+        padding-top: 25px;
+        h2 {
+          display:none;
+        }
+    }
+}
+
+#block-menu-menu-footer {
+    ul, ul li {
+        list-style:none !important;
+        margin:0;
+        padding:0;
+    }
+}
+
+// copyright
+#block-block-7 {
+  border-top:1px solid #ddd;
+  clear:both;
+  float:none;
+  font-size:12px;
+  margin:0;
+  padding:15px 0 0;
+  width:100%;
+  color:#ddd;
+}
+
+.copyright {
+  width:100%;
+  text-align:center;
+  margin-left:auto;margin-right:auto;
+}
+/*
+ * Custom page styles
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+/* Contact Page */
+
+#locationmap_map,
+#block-locationmap-image img {
+  padding: 3px !important;
+  border: solid 1px #CCCCCC;
+}
+
+#contact-site-form {
+
+    input[type="text"],
+    input[type="password"],
+    input.text,
+    input.title {
+        padding: 10px;
+        width: 598px;
+    }
+
+    input[type="submit"] {
+        padding: 0 10px;
+    }
+}
+
+#block-locationmap-image img{
+    width: 611px;
+    height: auto;
+}
+
+/*  404 Page  */
+
+.not-found {
+    background: url($pathImg + '404.png') no-repeat scroll 0 0 transparent;
+    border-right: 1px dashed #CCCCCC;
+    float: left;
+    height: 274px;
+    margin-right: 30px;
+    padding-right: 39px;
+    width: 468px;
+}
+
+.not-found-where-to-go {
+    float: left;
+    width: 373px;
+
+    h4 {
+        line-height: 23px;
+        margin-bottom: 25px;
+    }
+
+    li {
+        display: block;
+        list-style: none outside none;
+        padding-left: 3px;
+
+        a {
+            display: block;
+            padding: 5px;
+        }
+    }
+}
+
+/* maintenance page */
+
+.maintenance-page #header #logo {
+  margin-top: 40px;
+  text-align: center;
+  float:none;
+}
+.maintenance-page #main #content .section {
+  text-align: center;
+}
+
+/*
+ * menu styles
+ */
+
+body.front .active-trail {
+    border-bottom: none !important;
+}
+
+#secondary-menu {
+  float: right;
+}
+
+/* user menu */
+#block-system-user-menu {
+    margin:0 0 15px;
+    display: block;
+    float: right;
+    h2 {
+      display:none;
+    }
+    ul {
+        margin: 0;
+        li {
+            list-style: none;
+            display:inline;
+            float:left;
+            font-size:10px;
+            margin-right:5px;
+            &.last {
+              margin-right:0;
+            }
+        }
+    }
+}
+
+/* user name */
+#block-em-blocks-username {
+    margin:0 0 15px;
+    display: block;
+    float: right;
+}
+
+/* Main Menu */
+#block-system-main-menu {
+  display: block;
+  clear:right;
+  float:right;
+}
+
+#block-system-main-menu,
+#block-system-main-menu ul {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+#block-system-main-menu ul {
+    @include wrap();
+    margin:0;
+    padding:0;
+
+    li {
+        display: block;
+        float: left;
+    }
+}
+
+// menu dropdown styles
+.menu-minipanels .menu-block-wrapper ul.menu li a,
+.menu-minipanels .menu-block-wrapper ul.menu li.last a,
+.menu-minipanels .menu-block-wrapper ul.menu li.leaf a,
+.sidebar .block-menu ul li a,
+.sidebar .block-menu ul li.last a,
+.sidebar .block-menu ul li.leaf a {
+  color:$color-text-grey;
+  font-size:13px;
+  line-height:18px;
+    text-decoration:none;
+    &:hover, &.active {color:$color-blue;}
+    &:hover {border:none !important;}
+}
+
+
+.qtip-contentWrapper, .qtip-content {
+  background:none !important;
+  padding:0 5px 10px 0 !important;
+}
+
+.menu-minipanels .menu-block-wrapper ul.menu {
+
+  @include wrap();
+  background: white !important;
+  border:1px solid #ccc;
+  border-top:3px solid $color-green;
+  padding: 10px 10px 10px 10px;
+  margin: 0;
+  box-shadow: 1px 3px 6px #333;
+
+  li, li.leaf, li.last {
+    clear:both;
+    display:block;
+    float:left;
+    list-style:none !important;
+    margin:0 0 0 5px;
+    padding:3px 0 6px;
+  }
+}
+.sidebar .block-menu,
+.region-sidebar-first .block-menu {
+
+  h2 {
+    font-size:20px;
+    line-height:24px;
+  }
+
+  ul {
+    margin:0;
+    padding-left:5px;
+  }
+
+  ul li {
+    list-style:none !important;
+
+    a {
+      font-size:14px;
+      font-weight:bold !important;
+      line-height:16px;
+      text-decoration:none;
+    }
+  }
+}
+
+/*
+ * custom blocks
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+
+.region-highlighted {
+  .block-nodeblock h2 {
+    display:none;
+  }
+
+  /* trustmark title and text */
+  #block-nodeblock-35 {
+    clear:left;
+    float:left;
+    width:100%;
+    padding:15px 0 0;
+    .content {
+      clear:both;
+    }
+    h2 {
+      display:none;
+      &.title-logo {
+        background-position:right 2px;
+        display:block;
+        float:none;
+        font-size:26px;
+        max-width:330px;
+        padding:10px 95px 0 0;
+        width:100%;
+      }
+    }
+  }
+
+  .trust-text {
+    float:left;
+    width:45%;
+    min-width:480px;
+
+    p {
+      padding-right:10px;
+      clear:both;
+    }
+  }
+
+  /* this id will change 442 */
+  /* center img block */
+  #block-feature-link {
+    clear:none;
+    float:left;
+    min-width:230px;
+    padding-left:10px;
+    padding-right:10px;
+    width:23%;
+  }
+
+  /* this ID will change */
+  /* get started buttons */
+  .start-links {
+    clear:right;
+    float:left;
+    padding-left:0;
+    width:22%;
+    min-width:228px;
+  }
+
+  #block-views-earlyiq-slideshow-block-block-1 {
+    float:left;
+    margin:0;
+    width:20%;
+    overflow:hidden;
+    ul, li {
+      list-style:none;
+    }
+    ul, li, img, p {
+      margin:0;
+      padding:0;
+    }
+    .views-field a {
+      display:block;
+    }
+    img {
+      padding:25px 0 0 15px;
+
+    }
+  }
+  .start-links {
+    padding-top:25px;
+  }
+}
+
+/* our trustmark your trust block */
+#block-nodeblock-35 h2 {
+  background:url($pathSprite) 415px 2px no-repeat;
+  clear:right;
+  color:$color-blue;
+  float:left;
+  font-size:30px;
+  font-weight:normal;
+  line-height:32px;
+  margin-bottom:15px;
+  overflow:hidden;
+  padding:10px 95px 0 0;
+  width:415px;
+}
+
+
+/* slideshow block */
+#block-views-earlyiq-slideshow-block-block {
+    @include size(100%, 450px);
+    border-bottom:1px solid #ccc;
+    display:block;
+    margin-bottom:15px;
+
+    #slider-read-more {
+        background:url($pathImg + 'icon_slider_read-more.png') 0 -3px no-repeat;
+        clear:left;
+        float:left;
+        padding-left:20px;
+        // this is going to be a link to content
+
+        a {
+            color:$color-text-grey;
+            font-size:17px;
+            line-height:19px;
+            text-decoration:none;
+
+            &:hover {
+                color:$color-blue;
+            }
+        }
+    }
+
+    .view-content {
+        height:405px;
+        padding-bottom:30px;
+    }
+
+  .slideshow-items {
+    @include size(960px, 408px);
+    overflow:hidden;
+
+    ul,
+    ul li,
+    ul .item-list {
+      list-style:none;
+    }
+
+    .views-row {
+      @include size(960px, 410px);
+      background:#fff;
+      display:block;
+      margin-left:0;
+      position:relative;
+
+      .views-field {
+        background:$color-white;
+        clear:left;
+        display:block;
+        float:left;
+        overflow:hidden;
+        padding-left:30px;
+        width:320px;
+
+        &.views-field-title,
+        &.views-field-body {
+          width:290px;
+        }
+
+        &.views-field-title {
+            color:$color-blue;
+            font-size:28px;
+            line-height:32px;
+            padding-top:50px;
+            padding-bottom:5px;
+            text-decoration:none;
+        }
+
+        &.views-field-body p {
+          color:$color-text-grey;
+          font-size:20px;
+          line-height:22px;
+        }
+
+        &.views-field-field-slide-image {
+          @include size(605px, 410px);
+          background:none;
+          clear:none;
+          float:none;
+          padding-left:5px;
+          position:absolute;
+          top:0;
+          right:5px;
+          img {
+            @include box-shadow(0px, 3px, 7px, #222);
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-dots {
+  bottom:0;
+  text-align:center;
+  width:100%;
+
+  a {
+    @include animation(600);
+    @include hide-text();
+    @include border-radius(50%);
+    background:#cbcccd;
+    display:inline-block;
+    float:none !important; // /* js or */
+    margin-right:5px;
+    width:13px;
+    height:13px;
+
+    &.active {
+      @include animation(600);
+      background:#38659e;
+    }
+
+    &.last {margin-right:0;}
+  }
+}
+
+/* Homepage featured blocks */
+
+#block-views-seven-features-block-block .views-row .views-field-body,
+#block-views-seven-features-block-block .views-row .views-field-body p,
+#block-views-seven-features-block-block .views-row .views-field-body h2,
+#block-views-seven-features-block-block .views-row .views-field-body h3,
+#slider-read-more span,
+.trust-text p,
+a.views-more-link {
+    color:$color-text-grey;
+    font-size:15px;
+    font-weight:normal;
+    line-height:22px;
+}
+
+a.views-more-link:hover {
+    color:$color-blue;
+}
+
+#block-views-seven-features-block-block {
+    @include wrap();
+    border-bottom:1px solid #CCC;
+    margin-top:0;
+    padding: 0 20px 10px;
+    h2 {
+      display:none;
+    }
+    .view h2 {
+      display:block;
+    }
+    .views-row {
+        float: left;
+        margin-right: 35px;
+        padding-right: 20px;
+        width: 270px;
+
+        .views-field-body {
+            clear:both;
+          p, h2, h3 {
+            font-size:17px;
+            line-height:21px;
+          }
+        }
+
+        .views-field-title {
+            display:block;
+            height:60px;
+            h3 {
+                font-size: 20px;
+                line-height: 25px;
+                margin-bottom: 13px;
+                padding-top: 0;
+            }
+            a {
+                display:block;
+                padding:0;
+            }
+        }
+    }
+    .views-row-last {
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .views-field-field-image  {
+        float: left;
+        padding-right:10px;
+
+        img{
+            float: left;
+            width: 50px;
+            height: auto;
+        }
+    }
+}
+
+.view-id-seven_features_block .views-field-title a,
+.view-id-seven_features_block .views-field-title a.visited {
+    color:$color-header-green;
+    text-decoration:none;
+    &:hover {
+        color:$color-link-grey;
+    }
+}
+
+// icon styling
+.section-what-we-do .region-content .field-name-field-image {
+  @include size(52px, 52px);
+  float:left;
+  margin-right:20px;
+  overflow:hidden;
+  padding:0;
+  img {
+    border:0 !important;
+    width:52px !important;
+    height:52px !important;
+  }
+}
+
+/* tweets block */
+
+
+#block-views-earlyiq-tweets-block {
+  padding-top:0px;
+  float:left;
+
+  h2 {
+    color:white;
+    font-size:16px;
+    display:block;
+    padding-bottom:0px;
+  }
+  font-size:12px;
+  width:50%;
+  ul {
+    list-style-position:inside;
+  }
+  .content {
+    color:white;
+    padding:10px;
+    //border:1px solid #ccc;
+    border: 1px solid lightgrey;
+    -o-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    a {
+     color:#ccc;
+    }
+  }
+}
+
+
+
+/* trustwave block */
+
+#block-core-ef-footer-trust-block {
+  float:right;
+  width:105px;
+  margin-right:0;
+  padding-right:0;
+}
+
+#trustwave_block {
+  float:right;
+  width:105px;
+  img {
+    @include size(auto !important, auto !important); // resp o.r.
+    border:0 !important;
+    padding:0;
+  }
+}
+
+/* Social Sharing */
+
+#block-widgets-s-addthis-share {
+    margin-bottom: 6px;
+    min-height: 30px;
+    width:160px;
+}
+
+#widgets-element-socialmedia_addthis-facebook-like {
+    width: 109px;
+
+    a.addthis_button_facebook_like {
+        display: block;
+        width: 100%;
+    }
+
+    iframe{
+        width: 100% !important;
+    }
+}
+
+#widgets-element-socialmedia_addthis-tweet {
+    width: 90px;
+}
+
+#widgets-element-socialmedia_addthis-google-plusone {
+    width: 81px;
+}
+
+#widgets-element-socialmedia_addthis-addthis-counter {
+    margin-top: 0px;
+}
+
+/* Facebook Like Box */
+
+#block-widgets-s-facebook-like-box {
+    width: 247px;
+}
+
+.fb_iframe_widget {
+    span {
+        width: 247px !important;
+    }
+    iframe {
+        width: 100% !important;
+    }
+}
+
+/* copyright */
+
+#block-block-7 {
+    border-top: 1px solid;
+    clear: both;
+    float: none;
+    padding: 15px 0 0;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 3px;
+    .link-top {
+        background: url("../images/up.png") no-repeat scroll 0 0 transparent;
+        display: block;
+        margin: 0;
+        padding: 0 0 0 24px;
+    }
+}
+
+/* Footer Twitter Block */
+
+#block-twitter-block-default {
+
+    ul {
+        margin: 0;
+    }
+
+    .twitter_block_user img {
+        float: left;
+        height: 32px;
+        width: 32px;
+    }
+
+    .twitter_block_user_name {
+        display: block;
+        float: left;
+        font-style: italic;
+        margin-top: -6px;
+        padding-left: 6px;
+        padding-right: 5px;
+    }
+}
+
+li.first p.tweet {
+    border-bottom: 1px dashed;
+    display: block;
+    float: left;
+    padding-bottom: 20px;
+}
+
+div.widgets-element-horizontal {
+    float: left;
+    margin-bottom: 6px;
+    margin-right: 10px;
+}
+
+/* Welcome Block */
+
+#block-block-1 {
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 29px;
+    padding: 0 20px;
+}
+
+#block-block-1 h2 {
+  font-size: 24px;
+}
+
+/* some of the blocks on the /user page */
+#block-views-content-links-block,
+#block-em-blocks-investor-status,
+#block-core-ef-quick-tasks,
+#block-core-ef-user-links,
+#block-em-blocks-report-viewer-notification,
+#quick-task-links,
+#custom-user-links {
+  font-size:13px;
+  .content {
+    margin-left:15px;
+    a {
+      padding-bottom:5px;
+    }
+  }
+}
+
+#block-em-blocks-report-viewer-notification {
+  margin-top:10px;
+}
+
+/* comments */
+
+.comment {
+
+    background: url("../images/comment.png") no-repeat scroll 77px 26px transparent;
+
+    ul.links {
+        margin-left: 100px;
+    }
+
+    .submitted {
+        border-bottom: medium none !important;
+        margin-bottom: 7px;
+        margin-left: 99px;
+        margin-top: 17px;
+        padding-bottom: 0;
+    }
+
+    .content {
+        border: 1px solid #CCCCCC;
+        @include border-radius(4px);
+        margin-bottom: 26px;
+        margin-left: 99px;
+        margin-right: 20px;
+        padding: 20px;
+    }
+
+    &.comment-by-node-author {
+        background: url("../images/comment-author.png") no-repeat scroll 77px 26px transparent;
+        .content {
+            border: 1px solid #CCCCCC;
+            background-color: #EBEBEB;
+        }
+    }
+
+    &.last .content {
+        margin-bottom: 0;
+    }
+
+    .username {
+        font-weight: bold;
+    }
+
+    .user-picture {
+        float: left;
+        margin-top: -15px;
+    }
+}
+
+#comments {
+    background-color: white;
+    margin: 1.5em 0;
+    padding-top: 19px;
+
+    h2.title {
+        border-bottom: 1px solid #CCCCCC;
+        margin-bottom: 26px;
+    }
+}
+
+
+.node ul.links {
+    border-top: 2px dashed #CCCCCC;
+    font-size: 15px;
+    margin-top: 27px;
+    padding-top: 10px;
+}
+
+.indented {
+  margin-left: 67px;
+  margin-bottom: 51px;
+}
+
+/*
+ * START INHERITED STYLES FROM SEVEN THEME
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+/* Contextual Content Edition */
+.views-field-edit-node {
+    position: absolute;
+    z-index: 9999;
+}
+
+.views-field-edit-node a {
+    background: url($pathImg + 'edit.png') no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-size: 0.8em;
+    height: 21px;
+    margin-left: -5px;
+    margin-top: 3px;
+    padding: 1px 1px 1px 12px;
+    position: absolute;
+    text-decoration: none;
+    width: 32px;
+}
+
+.views-field-edit-node a:hover {
+    background: url($pathImg + 'edit-hover.png') no-repeat scroll 0 0 transparent;
+    color: #FF0000;
+}
+
+/* do not show the edit png on some pages like indetails */
+.page-indetails {
+  .form-item-pass,
+  #edit-timezone {
+    display:none;
+  }
+  .views-field-edit-node {
+    position:static;
+    z-index:auto;
+    a {
+      background:none;
+      color:#000000;
+      margin:inherit;
+      padding:0px;
+      height:auto;
+      position:static;
+      &:hover {
+       background:none;
+       color:#CCCCCC;
+      }
+    }
+  }
+}
+
+.view-mode-full .field-name-body img , .view-mode-full .field-name-field-image img{
+    border: 1px solid #CCCCCC;
+    height: auto;
+    padding: 3px;
+}
+
+body.sidebar-first .view-mode-full .field-name-body img,
+body.sidebar-second .view-mode-full .field-name-body img,
+body.sidebar-second .view-mode-full .field-name-field-image img,
+body.sidebar-first .view-mode-full .field-name-field-image img {
+    margin: 8px 0;
+    width: 611px;
+}
+
+.node .submitted {
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 24px;
+    padding-bottom: 9px;
+}
+
+/* Product Node */
+.field-name-field-additional-images {
+
+    .field-item {
+        float: left;
+        margin-right: 11px;
+    }
+
+    .field-label {
+        border-bottom: 1px solid #CCCCCC;
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 13px;
+        padding-bottom: 5px;
+    }
+
+    img {
+        padding: 3px;
+        border: 1px solid #CCCCCC;
+    }
+
+    .field-items {
+        overflow: hidden;
+    }
+}
+
+.region-bottom .block h2 {
+    color: #DDDDDD;
+    font-size: 19px;
+    padding-bottom:10px;
+}
+
+/* norm */
+.field-name-field-results-address-history,
+.field-name-field-results-civil-history,
+.field-name-field-results-criminal-history {
+  .field-item {
+    background-color:#E0E0E0;
+    border: 2px solid #ccc;
+    height: 250px;
+    margin: 5px 0;
+    min-width:300px;
+    /*min-height: 100px;*/
+    padding: 3px;
+    resize:both;
+    overflow: auto;
+  }
+}
+
+/***************************************
+ * application and report tables that 
+ * are on the /user page
+ **************************************/
+
+/* each block in the content region should be 
+   separated
+*/
+
+
+/* pager was not really centering, the table is at
+   95% but if the pager is at that is still does not
+   center hence the 90%
+*/
+.page-user .item-list .pager {
+    width:99%;
+}
+
+.page-user .region-content .block {
+    margin-bottom:35px;
+}
+
+// style of incomplete status for officers on report cards
+.status-incomplete {
+  color:red;
+}
+
+.earlyiq-table-style1 table {
+  th, td {
+    padding:5px;
+  }
+}
+.earlyiq-table-style1 tr.odd,
+#views-form-commerce-cart-form-default tr.odd,
+.view-investory-documents tr.odd,
+form[id^="eiq-report-card-add-viewer-form"] tr.odd,
+#eiq-report-card-add-viewer-form tr.odd,
+#block-core-ef-my-applications tr.odd,
+.view-certificates tr.odd,
+.view-report-cards tr.odd,
+.view-report-cards-i-own tr.odd,
+.view-my-account tr.odd {
+    background-color:#e0e8f0;
+}
+.earlyiq-table-style1 tr.even,
+#views-form-commerce-cart-form-default tr.even,
+.view-investory-documents tr.even,
+form[id^="eiq-report-card-add-viewer-form"] tr.even,
+#eiq-report-card-add-viewer-form tr.even,
+#block-core-ef-my-applications tr.even,
+.view-certificates tr.even,
+.view-report-cards tr.even,
+.view-report-cards-i-own tr.even,
+.view-my-account tr.even {
+    background-color:#eee;
+}
+.earlyiq-table-style1 table,
+#views-form-commerce-cart-form-default table,
+form[id^="eiq-report-card-add-viewer-form"] table,
+#eiq-report-card-add-viewer-form table,
+#block-core-ef-my-applications table,
+.view-report-cards table,
+.view-report-cards-i-own table,
+.view-my-account .views-table {
+    width:99%;    
+}
+.earlyiq-table-style1 table thead,
+#views-form-commerce-cart-form-default table thead,
+.view-investory-documents table thead,
+form[id^="eiq-report-card-add-viewer-form"] table thead,
+#eiq-report-card-add-viewer-form table thead,
+#block-core-ef-my-applications table thead,
+.view-certificates table thead,
+.view-report-cards table thead,
+.view-report-cards-i-own table thead,
+.view-my-account .views-table thead{ 
+      border-bottom: 4px solid white;
+}
+.earlyiq-table-style1 table thead tr,
+#views-form-commerce-cart-form-default table thead tr,
+.view-investory-documents table thead tr,
+form[id^="eiq-report-card-add-viewer-form"] table thead tr,
+#eiq-report-card-add-viewer-form table thead tr,
+#block-core-ef-my-applications table thead tr,
+.view-certificates table thead tr,
+.view-report-cards table thead tr,
+.view-report-cards-i-own table thead tr,
+.view-my-account .views-table thead tr { 
+      background: #4080E0;
+      height:30px;
+      color:white;
+}
+.earlyiq-table-style1 table thead tr a,
+#views-form-commerce-cart-form-default table thead tr a,
+.view-investory-documents table thead tr a,
+form[id^="eiq-report-card-add-viewer-form"] table thead tr a,
+#eiq-report-card-add-viewer-form table thead tr a,
+#block-core-ef-my-applications table thead tr a,
+.view-certificates table thead tr a,
+.view-report-cards table thead tr a,
+.view-report-cards-i-own table thead tr a,
+.view-my-account .views-table thead tr a { 
+      color:white;
+}
+.earlyiq-table-style1 table li,
+#views-form-commerce-cart-form-default table li,
+.view-investory-documents table li,
+form[id^="eiq-report-card-add-viewer-form"] table li,
+#eiq-report-card-add-viewer-form table li,
+#block-core-ef-my-applications table li,
+.view-certificates table li,
+.view-report-cards table li,
+.view-report-cards-i-own table li,
+.view-my-account .views-table li{
+  list-style:none;
+}
+.earlyiq-table-style1 table th td,
+#views-form-commerce-cart-form-default table th td,
+.view-investory-documents table th, td,
+form[id^="eiq-report-card-add-viewer-form"] table th, td,
+#eiq-report-card-add-viewer-form table th,td,
+#block-core-ef-my-applications table th,td,
+.view-certificates table th,td,
+.view-report-cards table th,td,
+.view-report-cards-i-own table th,td,
+.view-my-account .views-table th,td{
+    border-right:1px solid white;
+}
+.earlyiq-table-style1 table th,
+#views-form-commerce-cart-form-default table th,
+.view-investory-documents table th,
+form[id^="eiq-report-card-add-viewer-form"]  table th,
+#eiq-report-card-add-viewer-form table th,
+#block-core-ef-my-applications table th,
+.view-certificates table th,
+.view-report-cards table th,
+.view-report-cards-i-own table th,
+.view-my-account .views-table th{
+  text-align:center;
+}
+.earlyiq-table-style1 table td,
+#views-form-commerce-cart-form-default table td,
+.view-investory-documents table td,
+form[id^="eiq-report-card-add-viewer-form"] table td,
+#eiq-report-card-add-viewer-form table td,
+#block-core-ef-my-applications table td,
+.view-certificates table td,
+.view-report-cards table td,
+.view-report-cards-i-own table td,
+.view-my-account .views-table td{
+  padding-left:5px;
+}
+
+// special handling for the /cart table
+#views-form-commerce-cart-form-default table {
+  max-width:600px;
+  td {
+    vertical-align:middle;
+  }
+  td.views-field-commerce-node-checkout-node a {
+    text-decoration:none;
+    color:#333333;
+    cursor:default;
+  }
+  td.views-field-edit-delete {
+    text-align:center;
+    input {
+      margin-top:0px;
+      margin-left:40px;
+      padding:2px 10px;
+      display:inline-block;
+      font-size:13px;
+    }
+  }
+}
+//special padding for a table
+#block-views-certificates-block-1 table th {
+  padding:0 5px 0 5px;
+}
+
+//help text at the bottom of the application block
+
+//the reset request box was not going under the my certs
+#block-em-blocks-request-kba-reset {
+  clear:both;
+  padding-top:10px;
+}
+
+#block-em-blocks-request-kba-reset #request_kba_reset,
+#block-core-ef-my-applications #application-helptext {
+  width:99%;
+  margin-top:30px;
+  line-height:1.5em;
+}
+#block-em-blocks-request-kba-reset #request_kba_reset ul,
+#block-core-ef-my-applications #application-helptext ul {
+  list-style-type:none;
+  padding:10px;
+  -o-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+
+
+// this is for the help blocks created via views. each of 
+// the blocks created by this view have this class via
+// the view
+.background-rounded-grey,
+.contextual-help-block {
+  background-color: #F5F5F5;
+  padding:10px;
+  padding-bottom: 10px;
+  -o-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow:0 1px 2px #A9A9A9;
+  -webkit-box-shadow:0 1px 2px #A9A9A9;
+  box-shadow:0 1px 2px #A9A9A9;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#A9A9A9')";
+  filter:progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#A9A9A9');
+}
+
+// pop up icon position
+.view-contextual-help .popup-element-title {
+  display: inline;
+}
+
+// space between each faq line
+.view-contextual-help .views-row {
+  margin-bottom:5px;
+}
+
+
+// font size of each faq in block
+#block-views-contextual-help-block-1,
+#block-views-contextual-help-block-2 {
+  font-size:14px;
+}
+
+#popup-active-overlay h2 {
+  font-size: 18px;
+  font-weight: normal;
+  padding-bottom:0px;
+  a {
+    pointer-events: none;
+    cursor:default;
+  }
+}
+
+// application help lines that are added programmatically
+#block-em-blocks-request-kba-reset #request_kba_reset ul li,
+#block-core-ef-my-applications #application-helptext ul li {
+  text-align:center;
+  color:green;
+  font-weight:bold;
+  background-color: #F5F5F5;
+  margin-bottom:10px;
+  margin-left:0px;
+  padding:10px;
+  -o-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow:0 1px 2px #A9A9A9;
+  -webkit-box-shadow:0 1px 2px #A9A9A9;
+  box-shadow:0 1px 2px #A9A9A9;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#A9A9A9')";
+  filter:progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#A9A9A9');
+  a {
+    color:green;
+  }
+}
+
+
+#block-em-blocks-request-kba-reset #request_kba_reset ul li:last-child,
+#block-core-ef-my-applications #application-helptext ul li:last-child {
+  margin-bottom:0px;
+}
+
+/***************************************
+ **************************************/
+
+#block-eiq-partners-partner-header-logo {
+    margin-top:20px;
+}
+
+#node_data_person_form_group_personal_info legend {
+  display:none;
+}
+#edit-field-civil legend {
+    display:none;
+}
+
+/* generic colors defined in the base.scss */
+.color-blue {
+  color:$color-blue;
+}
+
+// read more styling from the read_more module
+.read-more:before {
+   content:"… ";
+}
+.read-more a {
+  color: #235a9f;
+}
+
+// for view on press releases
+.page-about-press-releases .press-releases h4[property="dc:title"],
+.page-about-press-releases .press-releases h4[property="dc:title"] a {
+  color: #235a9f;
+}
+
+.page-about-press-releases .press-releases .views-row {
+  margin-top:35px;
+  border-top: 1px solid lightgray;
+  padding-top: 20px;
+}
+
+//link to report cards that is shown to co_admins of Rock-the-post workflows
+#report-card-link {
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+#report-card-link-text {
+ font-size:10pt; 
+}
+
+#user.user {
+  padding-right:10px;
+  font-size:11px;
+  font-weight:bold;
+  line-height:18px;
+}
+
+// style exposed filter on my report cards block
+#block-views-certificates-block-3,
+#block-views-certificates-block-1,
+#block-views-report-cards-i-own-block-1,
+#block-views-my-account-block-1 {
+  // I need columns for a template but they are only available if they are
+  // in the fields of the view un-excluded.  So I exclude them with css.
+  .hideit {
+    display:none;
+  }
+  .views-exposed-form label,
+  .description {
+    line-height:2em;
+  }
+
+  .views-exposed-form label, 
+  .views-widget {
+    float:left;
+  }
+  .form-item-combine,
+  .form-item-title,
+  .description {
+    float:left;
+    padding-left:10px;
+  }
+  div.view-filters {
+    margin-bottom:20px;
+  }
+  .views-submit-button {
+     margin-top:-30px;
+  }
+}
+
+// let the user pages have wider content and max width company column
+.page-user #content-wrap #content {
+  padding-left: 10px;
+}
+
+// set max width on the company column on the /user page
+.page-user #content table.views-table thead tr th:first-child,
+.page-user #content table.views-table tbody tr td:first-child {
+  max-width:120px;
+}
+
+// Pipeline view styling
+#content .view-pipeline-investor table ul li { 
+  margin-left:0px;
+}
+
+// landing page stying, to see the styling of the form on the landing
+// page see form.scss
+
+// get rid of dashed borders on content
+body.page-node-edit #content,
+body.page-node-edit.sidebar-second #content,
+body.not-front.one-sidebar.node-type-landing-page #content {
+  border-left: none;
+  border-right: none;
+}
+
+// put in border on second sidebar
+body.not-front.one-sidebar.node-type-landing-page .region-sidebar-second {
+  border-left: 2px solid #CCCCCC;
+  padding-left: 27px;
+  padding-bottom: 0px;
+}
+
+// position block 
+body.not-front.one-sidebar.node-type-landing-page .region-sidebar-second div.block:first-child {
+  padding-top:0px;
+}
+
+// help for approval
+#approve-help-text-header {
+  font-weight:bold;
+}
+
+#eiq-report-card-approve-dispute-form div:first-child {
+  margin-left:30px;
+  width:90%;
+  background-color: white;
+  padding: 5px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+#admin-menu{ font-size:11px; }
+#admin-menu{ font-size:11px; }
+
+#formatted-reports > div {
+  margin-bottom:5px;
+  border:2px solid gray;
+  padding:2px 2px 2px 2px;
+}
+
+// popup module puts link in poor location that interferes with expanding the textbox
+form div.class-popup-filter-admin-form {
+  float:none;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+ul#operations li {
+  margin-left: 5px;
+}
+
+// investor certifates view block styling so the footer is on the right side
+#block-views-certificates-block-3,
+#block-views-certificates-block {
+  .view-content table.views-table {
+    width:99%;
+  }
+
+  .restrict-viewers-text {
+    font-weight:bold;
+  }
+
+  th,
+  td {
+    padding:5px;
+  }
+
+  /* line up the manage column */
+  td ul li {
+    margin-left:0px;
+  }
+
+  .view-footer {
+    a#edit-submit-cancel {
+      margin-top:0px;
+      margin-right:20px;
+    }
+  }
+
+  // push paragraph down below button
+  .re-cert-p2 {
+    margin-top:20px;
+  }
+}
+
+// investor documents view block styling so the footer is on the right side
+#block-views-investory-documents-block {
+
+  clear:both;
+  padding-top:20px;
+
+  th,
+  td {
+    padding:5px;
+  }
+  .view-content {
+    margin-right:10px;
+  }
+
+  .view-footer {
+    margin-top:15px;
+  }
+
+}
+
+// style the features list for report cards view
+@mixin background-grey-rounded {
+  background-color: #F5F5F5;
+  -o-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow:0 1px 2px #A9A9A9;
+  -webkit-box-shadow:0 1px 2px #A9A9A9;
+  box-shadow:0 1px 2px #A9A9A9;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#A9A9A9')";
+  filter:progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#A9A9A9');
+}
+
+// BLURB CONTENT TYPE
+
+.page-how-it-works-feature-for-report-card,
+.page-details {
+  .breadcrumb {
+    display:none;
+  }
+}
+
+// the main blurb page
+.view-id-blurbs.view-display-id-page_2,
+.view-id-blurbs.view-display-id-page {
+  table {
+    width:100%;
+  }
+  .view-header {
+    font-size:16px;
+    font-weight:18px;
+  }
+  tr {
+    border-bottom:1px dotted #ccc;
+    &:first-child {
+      border-top: 2px solid #ccc
+    }
+  }
+  td {
+    padding-top:30px;
+    padding-bottom:30px;
+    vertical-align:top;
+
+    &:first-child {
+      padding-right:30px;
+    }
+  }
+}
+
+// now for the alternating or left right image styling of subpages
+.view-id-blurbs.view-display-id-page_2  table {
+    //width:100%;
+    tr:nth-child(odd) {
+      background-color:white;
+    }
+    tr:nth-child(even) {
+      background-color:whitesmoke;
+    }
+    
+    // the header, body, button can only be so wide to allow for the 220px
+    // of the image.
+    td div {
+      &:nth-child(2) {
+        width:65%
+      }
+    }
+}
+//  body[class$="alt"] {
+.page-details-feature-for-report-card-alt {
+  .view-id-blurbs.view-display-id-page_2 {
+    tr:nth-child(odd) {
+      td div {
+        &:nth-child(1) { float:left; padding-left:30px; }
+        &:nth-child(2) { float:left; padding-left:30px; }
+      }
+    }
+    tr:nth-child(even) {
+      td div {
+        &:nth-child(1) { float:right; padding-right:30px }
+        &:nth-child(2) { float:left; padding-left:30px; padding-right:30px; }
+      }
+    }
+  }
+}
+
+.page-details-feature-for-report-card-left {
+  .view-id-blurbs.view-display-id-page_2 {
+      td div {
+        &:nth-child(1) { float:left; padding-left:30px; }
+        &:nth-child(2) { float:left; padding-left:30px; }
+      }
+  }
+}
+
+.page-details-feature-for-report-card-right {
+  .view-id-blurbs.view-display-id-page_2 {
+      td div {
+        &:nth-child(1) { float:right; padding-left:30px; }
+        &:nth-child(2) { 
+          float:left; padding-left:30px; 
+          .title_body {
+            float:left;
+          }
+        }
+      }
+  }
+}
+
+// the horizontal block at the top of blurb pages
+.view-id-blurbs.view-display-id-attachment_1,
+.view-id-blurbs.view-display-id-block_1  {
+  margin-bottom: 40px;
+
+  .view-content {
+    @include background-grey-rounded;
+  }
+  td {
+    padding:27px;
+    vertical-align: top;
+  }
+  img {
+    margin-left:auto;
+    margin-right:auto;
+    &:hover {
+      zoom: 1;
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+    }
+  }
+  .views-field-field-short-text {
+    text-align:center;
+  }
+}
+
+
+// on the detail blurb pages
+//float the image left on basic pages that have an image
+.node-type-blurb {
+  .breadcrumb {
+    display:none;
+  }
+}
+
+// center the heading and text in the block that is used for 
+// header of the blurbs
+#block-block-12 {
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.kba_status {
+  font-weight:bold;
+}
+
+// Don't show read more on some pages
+.view-personal-app-data,
+.page-bcdetails {
+  .read-more {
+    display:none;
+  }
+}
+
+.watermark1 {
+  @include opacity(.1);
+  position:absolute;
+  top:150px;
+  left:100px;
+  opacity:0.05;
+}
+
+
+/* don't display node title to users in personal app teaser mode */
+.node-data-person.node-teaser {
+  h2 {
+    display:none;
+  }
+}
+
+
+/* temporary fix for queensryche , don't want header/footers */
+.page-node-5192, .page-node-5662 {
+	#content-wrap {
+		background-image:none;
+	}	
+	header,
+	.breadcrumb,
+	.closure {
+		display:none;
+	}
+}
+
+/* work breadcrumb for certs */
+#my-work-list {
+  color:grey;
+  font-size:80%;
+}
+.page-node-edit.node-type-data-company .work-data-company,
+.page-node-edit.node-type-data-person .work-data-person,
+.page-node-edit.node-type-investor-documents .work-investor-documents,
+.page-node-edit.node-type-cert-docs .work-cert-docs {
+  color:black;
+  font-weight:bold;
+}
+
+/* Report views TQ Score padding */
+.views-field-field-tq-score {
+    padding-left: 3px;
+    padding-right: 3px;
+}
