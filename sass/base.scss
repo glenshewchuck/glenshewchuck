@@ -322,7 +322,7 @@ body.front #link-home,
 
 // masquerade
 #block-masquerade-masquerade {
-    @include wrap();
+    //@include wrap();
     padding:45px 0 0;
 }
 
@@ -336,21 +336,3 @@ body.front #link-home,
 .float_right {float:right;}
 .clear_both {clear:both;display:block;}
 
-
-/*
- *  theme stylesheets
- */
-
-@import 'partials/styles.scss';
-@import 'partials/analyst.scss';
-@import 'partials/forms.scss';
-@import 'partials/partner.scss';
-@import 'partials/reports.scss';
-@import 'partials/responsive.scss';
-@import 'partials/modal.scss';
-
-/*
- * import any custom style sheets that partners have provided
- * first used for realconnex
- */
-@import 'custom/realconnex.scss';

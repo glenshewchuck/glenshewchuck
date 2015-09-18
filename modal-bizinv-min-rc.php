@@ -14,7 +14,7 @@
 
 <?php
 $types='rc-bizinv-001';
-$coprefix='B001';
+$coprefix='A001';
 $api_key1='C2kwXvd4cN3wa642GvwMVMPfeWaozmpm1jLPBxT9uKo%3D';
 if (isset($_GET['suffix'])) {
     $x =  $_GET['suffix'];
