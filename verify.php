@@ -10,10 +10,10 @@
 $username = 'demo';
 $password = 'earlyiq';
 
-// local URL
+// local URL.
 //$url = 'http://earlyiq.dev/api/C2kwXvd4cN3wa642GvwMVMPfeWaozmpm1jLPBxT9uKo%3D/xml';
 
-// test URL
+// test URL.
 $url = 'https://testapi.earlyiq.com/api/C2kwXvd4cN3wa642GvwMVMPfeWaozmpm1jLPBxT9uKo%3D/xml';
 
 
