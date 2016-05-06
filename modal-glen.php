@@ -1,6 +1,6 @@
 <html>
 <head>
-<link type='text/css'  href='https://dev.earlyiq.com/sites/all/libraries/modal/css/osx.css' rel='stylesheet' media='screen' />
+<link type='text/css'  href='http://earlyiq.dev/sites/all/libraries/modal/css/osx.css' rel='stylesheet' media='screen' />
 </head>
 <body>
 <center>
@@ -26,7 +26,7 @@ if (isset($_GET['suffix'])) {
   class='osx demo-button'  
   style="color:235a9f; background-color:8dc126"
   data-iframe-height="690"
-  data-iframe-src="https://dev.earlyiq.com/partner/realconnex/cert/getstarted?page_template=modal&first_name=Steve
+  data-iframe-src="http://earlyiq.dev/partner/realconnex/cert/getstarted?page_template=modal&first_name=Steve
   &type=<?php echo $types; ?>
   &last_name=Sample
   &email=modal%2B<?php echo $x; ?>%40earlyiq.com
@@ -58,12 +58,10 @@ if (isset($_GET['suffix'])) {
 </div>  
 
 <!-- javascript that should be inserted at bottom of page -->
-<script type="text/javascript" src="https://dev.earlyiq.com/sites/all/modules/contrib/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.2"></script>
-<script type='text/javascript' src='https://dev.earlyiq.com/sites/all/libraries/modal/js/jquery.simplemodal.js'></script>
-<script type='text/javascript' src='https://dev.earlyiq.com/sites/all/libraries/modal/js/osx_glen.js?<?php echo date('mdhis'); ?>'></script>
-<script type='text/javascript' src='https://dev.earlyiq.com/sites/all/libraries/modal/js/mobile-detect.min.js?<?php echo date('mdhis'); ?>'></script>
-<script type='text/javascript' src='https://dev.earlyiq.com/sites/all/libraries/modal/js/spin.min.js?<?php echo date('mdhis'); ?>'></script>
-<script type='text/javascript' src='https://dev.earlyiq.com/sites/all/libraries/modal/js/jquery.ba-postmessage.min.js'></script>
+<script type="text/javascript" src="http://earlyiq.dev/sites/all/modules/contrib/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.2"></script>
+<script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/earlyiq.min.js?<?php echo date('mdhis'); ?>'></script>
+<script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/jquery.ba-postmessage.min.js'></script>
 
 
 </body>
