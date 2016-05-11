@@ -1,11 +1,12 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link type='text/css'  href='http://earlyiq.dev/sites/all/libraries/modal/css/osx.css' rel='stylesheet' media='screen' />
 </head>
 <body>
 <center>
 <br>
-<h1 style="color:235a9f; font-family:arial">LOCAL Modal Integration Demo</h1>
+<h1 style="color:235a9f; font-family:arial">Modal Integration Demo</h1>
 <br>
 <br>
 <h2 style="color:235a9f; font-family:arial">Partner Site Initiation</h2>
@@ -13,11 +14,11 @@
 <br>
 
 <?php
-$types='rc-inv-001';
+$types='um-bck-001';
 if (isset($_GET['suffix'])) {
     $x =  $_GET['suffix'];
 } else { 
-    $x =  date('mdhiss'); 
+    $x =  date('mdhis'); 
 }
 ?>
 
@@ -26,18 +27,11 @@ if (isset($_GET['suffix'])) {
   class='osx demo-button'  
   style="color:235a9f; background-color:8dc126"
   data-iframe-height="690"
-  data-iframe-src="http://earlyiq.dev/partner/realconnex/cert/getstarted?page_template=modal&first_name=Steve
+  data-iframe-src="http://earlyiq.dev/partner/umergencecorp/cert/getstarted?page_template=modal&first_name=Steve
   &type=<?php echo $types; ?>
   &last_name=Sample
   &email=modal%2B<?php echo $x; ?>%40earlyiq.com
-  &api_key1=C2kwXvd4cN3wa642GvwMVMPfeWaozmpm1jLPBxT9uKo%3D
-  &gender=M
-  &country=US
-  &address1=777 DeYeeWee St
-  &address2=Sweet 1 Dude
-  &city=Leucadia
-  &state=CA
-  &postal=92024
+  &api_key1=O2n6kwJeYE3jQPekqTMkIaAM0SObbkWN7nU3Cg5c1v4%3D
   &no_password=1
   &partner_ref_id=<?php echo $x; ?>
 ">Get Verified</a>
@@ -60,7 +54,9 @@ if (isset($_GET['suffix'])) {
 <!-- javascript that should be inserted at bottom of page -->
 <script type="text/javascript" src="http://earlyiq.dev/sites/all/modules/contrib/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.2"></script>
 <script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/jquery.simplemodal.js'></script>
-<script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/earlyiq.min.js?<?php echo date('mdhis'); ?>'></script>
+<script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/osx.js?<?php echo date('mdhis'); ?>'></script>
+<script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/spin.min.js?<?php echo date('mdhis'); ?>'></script>
+<script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/mobile-detect.min.js?<?php echo date('mdhis'); ?>'></script>
 <script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/jquery.ba-postmessage.min.js'></script>
 
 
