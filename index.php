@@ -12,6 +12,10 @@
 
 <body>
 <h1>Body</h1>
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<a href="www.google.com"><div><h2>test of link with mulitple elements</h2><img src="kev.jpg" height="100px" width="100px"></img></div></a>
+<br /><br /><br /><br />
 <h2 class="wow">Paragraph1</h2><p> This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  </p>
 <br /><br /><br /><br />
 <h2 class="wow">Paragraph2</h2><p> This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  This is a test this is only a test.  </p>
