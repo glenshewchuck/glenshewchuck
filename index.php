@@ -11,6 +11,7 @@
 
 
 <body>
+<?php asfdaaa('ok'); ?>
 <h1>Body</h1>
 <br /><br /><br /><br />
 <br /><br /><br /><br />
