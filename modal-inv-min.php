@@ -1,6 +1,7 @@
 <html>
 <head>
 <link type='text/css'  href='http://earlyiq.dev/sites/all/libraries/modal/css/osx.css' rel='stylesheet' media='screen' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
 </head>
 <body>
 <center>
@@ -63,7 +64,7 @@ if (isset($_GET['suffix'])) {
 <!-- javascript that should be inserted at bottom of page -->
 <script type="text/javascript" src="http://earlyiq.dev/sites/all/modules/contrib/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.2"></script>
 <script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/jquery.simplemodal.js'></script>
-<script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/earlyiq.min.js?<?php echo date('mdh'); ?>'></script>
+<script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/earlyiq.min.js?<?php echo date('mdhi'); ?>'></script>
 <script type='text/javascript' src='http://earlyiq.dev/sites/all/libraries/modal/js/jquery.ba-postmessage.min.js'></script>
 
 
