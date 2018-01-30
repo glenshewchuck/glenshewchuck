@@ -11,7 +11,6 @@ pipeline {
     }
     stage('Next Stage') {
       steps {
-        build 'testjob'
         echo 'test'
       }
     }
